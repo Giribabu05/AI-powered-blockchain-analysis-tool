@@ -19,7 +19,6 @@
 <p>No anomalies found or insufficient data.</p>
 {% else %}
 <h3>Feature Comparison</h3>
-24
 <img src="/static/feature_comparison.png" alt="Feature Comparison">
 <h3>Time Series Plot</h3>
 <img src="{{ url_for('static', filename='time_series.png') }}" alt="Time Series Plot">
@@ -46,7 +45,6 @@
 <td>{{ "%.5f"|format(row['anomaly_score']) }}</td>
 </tr>
 {% endfor %}
-25
 </table>
 {% if not anomalies.empty %}
 <a href="/download_csv"><button>Download as CSV</button></a>
